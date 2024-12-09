@@ -1,4 +1,5 @@
 import { useState} from 'react'
+import "../App.css"
 
 const AddMovie = ({onAddMovie}) => {
 
@@ -19,7 +20,9 @@ const AddMovie = ({onAddMovie}) => {
         }
       };
   return (
-    <div>
+    <div className='addInput'>
+
+        <h2>Add Movie</h2>
          
       <input
         type="text"
