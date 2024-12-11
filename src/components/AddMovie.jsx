@@ -10,7 +10,7 @@ const AddMovie = ({ onAddMovie }) => {
 
   const handleAdd = () => {
     if (title && description && posterURL && rating && trailerURL) {
-      onAddMovie({ title, description, posterURL, rating });
+      onAddMovie({ title, description, posterURL, rating, trailerURL });
       setTitle("");
       setDescription("");
       setPosterURL("");
