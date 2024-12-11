@@ -35,7 +35,7 @@ const App = () => {
     const movieWithId = { ...newMovie, id: nextId };
     setMovies([...movies, movieWithId]);
   };
-  console.log(movies);
+ 
 
 
 
