@@ -44,7 +44,7 @@ container: {
   return (
    <div style={style.container}>
      <div style={style.grid}>
-       <img src={movie.posterURL} alt={movie.title} style={{ width: "300px" }} />
+       <img src={movie.posterURL} alt={movie.title} style={{ width: "300px" }} onError={(e) => e.target.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzMP_KMX-JYjb9tSoCTdzSNlC9BKI9rSBM7Q&s'} />
       <h2>{movie.title}</h2>
       <p>{movie.description}</p>
       <p>Rating: {movie.rating}</p>
