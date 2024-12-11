@@ -1,6 +1,7 @@
 import { useState} from 'react'
 import "../App.css"
 
+
 const AddMovie = ({onAddMovie}) => {
 
     const [title, setTitle] = useState('');
@@ -20,39 +21,91 @@ const AddMovie = ({onAddMovie}) => {
         }
       };
   return (
-    <div className='addInput'>
 
-        <h2>Add Movie</h2>
-         
-      <input
-        type="text"
-        placeholder="Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Poster URL"
-        value={posterURL}
-        onChange={(e) => setPosterURL(e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="Rating"
-        value={rating}
-        onChange={(e) => setRating(Number(e.target.value))}
-      />
-      <button type='submit'  onClick={handleAdd}>Add Movie</button>
-   
+    <div>
+     
+     
+        <div className='addInput'>
+    
 
+    <h2>Add Movie</h2>
+     
+ <div style={style.hold}>
+  <label htmlFor="label"> Title:</label>
+ <input
+ style={style.input}
+    type="text"
+    placeholder="Title"
+    value={title}
+    onChange={(e) => setTitle(e.target.value)}
+  />
+ </div>
+<div style={style.hold}>
+<label htmlFor="">Description:</label>
+  <input
+  style={style.input}
+    type="text"
+    placeholder="Description"
+    value={description}
+    onChange={(e) => setDescription(e.target.value)}
+  />
+</div>
+   <div style={style.hold}>
+   <label htmlFor="">Poster:</label>
+  <input
+  style={style.input}
+    type="text"
+    placeholder="Poster URL"
+    value={posterURL}
+    onChange={(e) => setPosterURL(e.target.value)}
+  />
+   </div>
+
+ <div style={style.hold}>
+ <label htmlFor=""> Rating:</label>
+  <input
+  style={style.input}
+    type="number"
+    placeholder="Rating"
+    value={rating}
+    onChange={(e) => setRating(Number(e.target.value))}
+  />
+ </div>
+  <button type='submit'  onClick={handleAdd} style={style.btn} >Add Movie</button>
+
+
+
+</div>
     </div>
+   
   )
 }
+const style = {
+  hold: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
 
+  }, 
+
+  input: {
+    height: "45px",
+    width: "300px",
+    margin: "10px 0px 10px 0px"
+  },
+
+  btn: {
+    width: "130px",
+    height: "40px",
+    backgroundColor: "green",
+    color: "white",
+    border: "none",
+    borderRadius: "20px",
+    // cursor: "pointer",
+    textAlign: "center",
+    marginTop: "20px"
+  }
+
+}
+  
 export default AddMovie

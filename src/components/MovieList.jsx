@@ -15,8 +15,8 @@ const MovieList = ({ movies }) => {
 
   return (
     <div  style={style.grid} >
-         {movies.map((movie, index) => (
-        <MovieCard key={index} movie={movie} />
+         {movies.map((movie) => (
+        <MovieCard key={movie.id} movie={movie}  />
       ))}
     </div>
   );
